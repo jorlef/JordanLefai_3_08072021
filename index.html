@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!--import fonts-->
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
     <!--import css-->
@@ -41,7 +41,7 @@
             <input
               type="text"
               name="town"
-              class="search__input"
+              class="input search__input"
               placeholder="Votre ville"
               value="Paris, Belleville"
             />
@@ -50,8 +50,7 @@
           <div class="search__book">
             <h1>Réservez le menu qui vous convient</h1>
             <p>
-              Découvrez des restaurants d'exceptions, séléctionnés par nos
-              soins.
+              Découvrez des restaurants d'exception, séléctionnés par nos soins.
             </p>
             <button type="submit" class="btn search__buton">
               Explorer nos restaurants
@@ -65,17 +64,17 @@
         <ul class="functioning__list">
           <li><h2 class="functioning__title">Fonctionnement</h2></li>
           <!-- Step 1-->
-          <li class="functioning__step">
+          <li class="functioning__step functioning__step--hover">
             <span>1</span><i class="fas fa-mobile-alt"></i
             ><span>Choisissez un restaurant</span>
           </li>
           <!-- Step 2-->
-          <li class="functioning__step">
+          <li class="functioning__step functioning__step--hover">
             <span>2</span><i class="fas fa-list-ul"></i
             ><span>Composez votre menu</span>
           </li>
           <!-- Step 3-->
-          <li class="functioning__step">
+          <li class="functioning__step functioning__step--hover">
             <span>3</span><i class="fas fa-store"></i
             ><span>Dégustez au restaurant</span>
           </li>
@@ -84,7 +83,7 @@
 
       <!-- restaurants section-->
       <section class="restaurants">
-        <h2 class="restaurants__tile">Restaurants</h2>
+        <h2 class="restaurants__title">Restaurants</h2>
         <ul class="restaurants__container">
           <!--Carte 1-->
           <li class="restaurants__card">
@@ -94,7 +93,7 @@
                   src="./assets/restaurants/palette_resized_w1kpx.jpg"
                   alt="Restaurant La palette du goût"
                 />
-                <figcaption>
+                <figcaption class="restaurants__caption">
                   <div class="restaurant__desc">
                     <h3>La palette du goût</h3>
                     <p>Ménilmontant</p>
@@ -114,7 +113,7 @@
                   src="./assets/restaurants/note_resized_w1kpx.jpg"
                   alt="Restaurant La note enchantée"
                 />
-                <figcaption>
+                <figcaption class="restaurants__caption">
                   <div class="restaurant__desc">
                     <h3>La note enchantée</h3>
                     <p>Charonne</p>
@@ -134,7 +133,7 @@
                   src="./assets/restaurants/francaise_resized_w1kpx.jpg"
                   alt="Restaurant A la française"
                 />
-                <figcaption>
+                <figcaption class="restaurants__caption">
                   <div class="restaurant__desc">
                     <h3>À la française</h3>
                     <p>Cité Rouge</p>
@@ -154,7 +153,7 @@
                   src="./assets/restaurants/delice_resized_w1kpx.jpg"
                   alt="Restaurant Le délice des sens"
                 />
-                <figcaption>
+                <figcaption class="restaurants__caption">
                   <div class="restaurant__desc">
                     <h3>Le délice des sens</h3>
                     <p>Folie-Méricourt</p>
@@ -172,19 +171,23 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <ul class="footer__list">
-        <li><h3>ohmyfood</h3></li>
-        <li class="footer_link">
-          <a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
+      <ul class="footer__container">
+        <li><h3 class="footer__title">ohmyfood</h3></li>
+        <li class="footer__list">
+          <a href="#" class="footer__link"
+            ><i class="fas fa-utensils"></i>Proposer un restaurant</a
+          >
         </li>
-        <li class="footer_link">
-          <a href="#"
+        <li class="footer__list">
+          <a href="#" class="footer__link"
             ><i class="fas fa-hands-helping"></i>Devenir un partenaire</a
           >
         </li>
-        <li class="footer_link"><a href="#">Mentions légales</a></li>
-        <li class="footer_link">
-          <a href="mailto:webmaster@ohmyfood.com">Contact</a>
+        <li class="footer__list"><a href="#" class="footer__link">Mentions légales</a></li>
+        <li class="footer__list">
+          <a href="mailto:webmaster@ohmyfood.com" class="footer__link"
+            >Contact</a
+          >
         </li>
       </ul>
     </footer>

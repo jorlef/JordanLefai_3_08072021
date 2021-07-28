@@ -13,4 +13,20 @@
       font-family: "Shrikhand", cursive;
       font-size: 2em;
   }
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__arrow {
+    flex-basis: 10%;
+    font-size: 0.7em;
+    text-align: left;
+    & a {
+      padding-left: 20px;
+    }
+  }
+  &__logo {
+    flex-basis: 80%;
+  }
+
 }

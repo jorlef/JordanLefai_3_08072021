@@ -19,9 +19,7 @@
         rel="stylesheet"
       />
       <!--import css-->
-
-      <!-- <link rel="stylesheet" href="./css/style.css" /> -->
-
+      <link rel="stylesheet" href="../css/style.css" />
       <link rel="icon" href="../assets/logo/icon.svg" />
       <title>ohmyfood - Restaurant La palette du goût.</title>
     </head>
@@ -31,12 +29,14 @@
     <header class="header">
       <nav class="header__nav">
         <ul class="header__list">
-          <li>
+          <li class="header__arrow">
             <a href="../" class="header__link"
               ><i class="fas fa-arrow-left"></i
             ></a>
           </li>
-          <li><a href="../" class="header__link"> ohmyfood </a></li>
+          <li class="header__logo">
+            <a href="../" class="header__link"> ohmyfood </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -231,17 +231,17 @@
     <footer class="footer">
       <ul class="footer__list">
         <li><h3>ohmyfood</h3></li>
-        <li class="footer_link">
-          <a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
+        <li>
+          <a href="#" class="footer__link"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
         </li>
-        <li class="footer_link">
-          <a href="#"
+        <li>
+          <a href="#" class="footer__link"
             ><i class="fas fa-hands-helping"></i>Devenir un partenaire</a
           >
         </li>
-        <li class="footer_link"><a href="#">Mentions légales</a></li>
-        <li class="footer_link">
-          <a href="mailto:webmaster@ohmyfood.com">Contact</a>
+        <li><a href="#" class="footer__link">Mentions légales</a></li>
+        <li>
+          <a href="mailto:webmaster@ohmyfood.com" class="footer__link">Contact</a>
         </li>
       </ul>
     </footer>

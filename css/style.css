@@ -9,6 +9,10 @@ a {
   color: #000;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -19,13 +23,23 @@ h1 {
 }
 
 .btn {
-  height: 2rem;
-  width: 10rem;
+  height: 3rem;
+  width: 13rem;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(340deg, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
   color: #fff;
+  font-size: 0.9em;
+  font-weight: 700;
   box-shadow: 0 2px 5px gray;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  color: #353535;
 }
 
 .header {
@@ -44,17 +58,143 @@ h1 {
   font-family: "Shrikhand", cursive;
   font-size: 2em;
 }
-
-.search {
-  text-align: center;
+.header__list {
+  display: flex;
+  align-items: center;
 }
+.header__arrow {
+  flex-basis: 10%;
+  font-size: 0.7em;
+  text-align: left;
+}
+.header__arrow a {
+  padding-left: 20px;
+}
+.header__logo {
+  flex-basis: 80%;
+}
+
 .search__bar {
   background-color: #eaeaea;
-  padding: 1em 0;
+  padding: 1em 0 1em 3em;
+  color: #353535;
+  text-align: center;
+}
+.search__input {
+  padding-left: 0.8em;
 }
 .search__book {
   background-color: #f6f6f6;
-  padding: 3em 0;
+  padding: 3em 2em;
+  text-align: center;
+}
+.search__book h1 {
+  padding: 0 1em;
+}
+.search__book p {
+  padding: 1em 0 1.5em 0;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 1.5rem 1.2rem;
+  color: #fff;
+}
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+.footer__list {
+  margin: 0.5em 0;
+}
+.footer__link {
+  color: #fff;
+  font-weight: 300;
+}
+.footer__link i {
+  width: 1.7em;
+}
+
+.functioning {
+  margin: 3em 1em 3em 2em;
+}
+.functioning__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.functioning__step {
+  background-color: #f6f6f6;
+  padding: 1em 0;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px gray;
+}
+.functioning__step > span:first-child {
+  display: inline-flex;
+  height: 25px;
+  width: 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  background-color: #9356DC;
+  color: #fff;
+  transform: translateX(-10px);
+}
+.functioning__step i {
+  color: gray;
+  width: 2.5em;
+  text-align: center;
+  font-size: 1.2em;
+}
+.functioning__step span:nth-child(3) {
+  display: inline-block;
+  font-weight: 700;
+}
+.functioning__step--hover:hover {
+  transition: background-color 400ms;
+  background-color: #e4d5f6;
+}
+.functioning__step--hover:hover > i {
+  transition: background-color 400ms;
+  color: #9356DC;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 3em 1.1em;
+}
+.restaurants__title {
+  margin-bottom: 1em;
+}
+.restaurants__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+.restaurants__card {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px gray;
+}
+.restaurants__card img {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+}
+.restaurants__caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6em 1em;
+}
+.restaurants__caption i {
+  font-size: 2em;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=style.css.map */
