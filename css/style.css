@@ -1,13 +1,60 @@
-/* Reset some values */
 *, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
-/* Header */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+.btn {
+  height: 2rem;
+  width: 10rem;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(340deg, #9356DC 0%, #FF79DA 100%);
+  color: #fff;
+  box-shadow: 0 2px 5px gray;
+}
+
+.header {
+  height: 4rem;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  box-shadow: 0 2px 5px gray;
+}
+.header__nav {
+  margin-top: auto;
+  margin-bottom: auto;
+  transform: translateY(30%);
+}
+.header__link {
+  font-family: "Shrikhand", cursive;
+  font-size: 2em;
+}
+
+.search {
+  text-align: center;
+}
+.search__bar {
+  background-color: #eaeaea;
+  padding: 1em 0;
+}
+.search__book {
+  background-color: #f6f6f6;
+  padding: 3em 0;
+}
+
+/*# sourceMappingURL=style.css.map */

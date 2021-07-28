@@ -1,22 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--import font-awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!--preconnect fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--import fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <!--import css-->
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./assets/logo/icon.svg" />
     <title>OhMyFood - Reservez le menu qui vous convient.</title>
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <a href="index.html"
-        ><img src="./assets/logo/ohmyfood@2x.svg" alt="Logo du site OhMyFood"
-      /></a>
+    <header class="header">
+      <nav class="header__nav">
+        <a href="./" class="header__link"> ohmyfood </a>
+      </nav>
     </header>
 
     <!-- Main content -->
-    <main></main>
+    <main>
+      <section class="search">
+        <form method="GET" action="index.html" class="search__form">
+          <div class="search__bar">
+            <i class="fas fa-map-marker-alt fa-lg"></i>
+            <input
+              type="text"
+              name="town"
+              class="search__input"
+              placeholder="Votre ville"
+              value="Paris, Belleville"
+            />
+          </div>
+          <div class="search__book">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>
+              Découvrez des restaurants d'exceptions, séléctionnés par nos
+              soins.
+            </p>
+            <button type="submit" class="btn search__buton">Explorer nos restaurants</button>
+          </div>
+        </form>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer></footer>

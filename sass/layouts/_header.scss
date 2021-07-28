@@ -1,0 +1,16 @@
+.header {
+  height: $header-height;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  @include header_box-shadow;
+  &__nav {
+    margin-top: auto;
+    margin-bottom: auto;
+    transform: translateY(30%);
+  }
+  &__link {
+      font-family: "Shrikhand", cursive;
+      font-size: 2em;
+  }
+}

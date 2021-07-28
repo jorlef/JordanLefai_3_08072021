@@ -1,0 +1,14 @@
+.search {
+    text-align: center;
+    // &__form {
+        
+    // }
+    &__bar {
+        background-color: $background-color_input;
+        padding: 1em 0;
+    }
+    &__book {
+        background-color: $background-color_book;
+        padding: 3em 0;
+    }
+}

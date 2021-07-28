@@ -1,0 +1,13 @@
+.btn {
+    height: 2rem;
+    width: 10rem;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(340deg, $color-primary 0%, $color-secondary 100%);
+    color: $color-white;
+    @include header_box-shadow;
+
+    // &:hover {
+
+    // }
+}
