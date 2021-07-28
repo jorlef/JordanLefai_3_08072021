@@ -1,0 +1,80 @@
+.section {
+    position: relative;
+    &__img {
+        width: 100%;
+    }
+    &__caption {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 2rem 1rem;
+        bottom: 0;
+        width: 100%;
+        border-radius: 25px 25px 0 0;
+        background-color: $background-color_primary;
+        & .far {
+            font-size: 1.8rem;
+        }
+    }
+    &__title {
+        text-align: center;
+        font-family: "Shrikhand", cursive;
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+}
+
+.menus {
+    background-color: $background-color_primary;
+    padding: 0 1rem 2rem 1rem;
+    &__list {
+        & > li {
+            margin-bottom: 2rem;
+        }
+    }
+    &__type {
+        & li:first-child {
+            position: relative;
+        }
+        & h2 {
+            padding: 5px 0;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+        & h2::before {
+            content: "";
+            position: absolute;
+            background-color: $color-tertiary;
+            height: 3px;
+            width: 50px;
+            bottom: 0;
+        }
+    }
+    &__card {
+        background-color: $color-white;
+        border-radius: 15px;
+        margin: 1rem 0;
+        height: 4.5rem;
+        @include header_box-shadow;
+        & label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__desc {
+        padding: 1rem 0.5rem;
+    }
+    &__price {
+        padding-right: 2rem;
+    }
+    &__checked {
+        display: none;
+    }
+    &__button {
+        text-align: center;
+        padding-top: 1rem;
+    }
+}
