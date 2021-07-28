@@ -32,6 +32,7 @@
 
     <!-- Main content -->
     <main>
+      <!-- Search section-->
       <section class="search">
         <form method="GET" action="index.html" class="search__form">
           <div class="search__bar">
@@ -50,13 +51,138 @@
               Découvrez des restaurants d'exceptions, séléctionnés par nos
               soins.
             </p>
-            <button type="submit" class="btn search__buton">Explorer nos restaurants</button>
+            <button type="submit" class="btn search__buton">
+              Explorer nos restaurants
+            </button>
           </div>
         </form>
+      </section>
+
+      <!-- functionning section -->
+      <section class="functioning">
+        <ul class="functioning__list">
+          <li><h2 class="functioning__title">Fonctionnement</h2></li>
+          <!-- Step 1-->
+          <li class="functioning__step">
+            <span>1</span><i class="fas fa-mobile-alt"></i
+            ><span>Choisissez un restaurant</span>
+          </li>
+          <!-- Step 2-->
+          <li class="functioning__step">
+            <span>2</span><i class="fas fa-list-ul"></i
+            ><span>Composez votre menu</span>
+          </li>
+          <!-- Step 3-->
+          <li class="functioning__step">
+            <span>3</span><i class="fas fa-store"></i
+            ><span>Dégustez au restaurant</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- restaurants section-->
+      <section class="restaurants">
+        <h2 class="restaurants__tile">Restaurants</h2>
+        <ul class="restaurants__container">
+          <!--Carte 1-->
+          <li class="restaurants__card">
+            <a href="#" class="restaurants__link">
+              <figure>
+                <img
+                  src="./assets/restaurants/palette_resized_w1kpx.jpg"
+                  alt="Menu La palette du goût"
+                />
+                <figcaption>
+                  <div class="restaurant__desc">
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+                  </div>
+                  <div class="restaurant__like">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <!--Carte 2-->
+          <li class="restaurants__card">
+            <a href="#" class="restaurants__link">
+              <figure>
+                <img
+                  src="./assets/restaurants/note_resized_w1kpx.jpg"
+                  alt="Menu La note enchantée"
+                />
+                <figcaption>
+                  <div class="restaurant__desc">
+                    <h3>La note enchantée</h3>
+                    <p>Charonne</p>
+                  </div>
+                  <div class="restaurant__like">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <!--Carte 3-->
+          <li class="restaurants__card">
+            <a href="#" class="restaurants__link">
+              <figure>
+                <img
+                  src="./assets/restaurants/francaise_resized_w1kpx.jpg"
+                  alt="Menu A la française"
+                />
+                <figcaption>
+                  <div class="restaurant__desc">
+                    <h3>À la française</h3>
+                    <p>Cité Rouge</p>
+                  </div>
+                  <div class="restaurant__like">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <!--Carte 4-->
+          <li class="restaurants__card">
+            <a href="#" class="restaurants__link">
+              <figure>
+                <img
+                  src="./assets/restaurants/delice_resized_w1kpx.jpg"
+                  alt="Menu Le délice des sens"
+                />
+                <figcaption>
+                  <div class="restaurant__desc">
+                    <h3>Le délice des sens</h3>
+                    <p>Folie-Méricourt</p>
+                  </div>
+                  <div class="restaurant__like">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer></footer>
+    <footer class="footer">
+      <ul class="footer__list">
+        <li><h3>ohmyfood</h3></li>
+        <li class="footer_link">
+          <a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
+        </li>
+        <li class="footer_link">
+          <a href="#"
+            ><i class="fas fa-hands-helping"></i>Devenir un partenaire</a
+          >
+        </li>
+        <li class="footer_link"><a href="#">Mentions légales</a></li>
+        <li class="footer_link"><a href="mailto:webmaster@ohmyfood.com">Contact</a></li>
+      </ul>
+    </footer>
   </body>
 </html>
