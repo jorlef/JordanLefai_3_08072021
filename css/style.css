@@ -259,7 +259,7 @@ h1 {
   height: 4.5rem;
   box-shadow: 0 2px 5px gray;
 }
-.menus__card label {
+.menus__card > div {
   display: flex;
   justify-content: space-between;
   align-items: center;

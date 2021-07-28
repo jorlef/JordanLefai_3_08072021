@@ -58,7 +58,7 @@
         margin: 1rem 0;
         height: 4.5rem;
         @include header_box-shadow;
-        & label {
+        & > div {
             display: flex;
             justify-content: space-between;
             align-items: center;

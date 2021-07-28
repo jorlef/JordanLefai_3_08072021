@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +21,6 @@
       <link rel="stylesheet" href="../css/style.css" />
       <link rel="icon" href="../assets/logo/icon.svg" />
       <title>ohmyfood - Restaurant Le délice des sens.</title>
-    </head>
   </head>
   <body>
     <!-- Header -->
@@ -59,7 +57,7 @@
 
       <!-- menus sections-->
       <section class="menus">
-        <form action="">
+        <form action="delice-sens.html">
           <ul class="menus__list">
             <!-- starters part-->
             <li>
@@ -68,7 +66,7 @@
                   <li><h2>Entrées</h2></li>
                   <li class="menus__card">
                     <input type="checkbox" id="tarta" name="e1" value="1" />
-                    <label for="tarta">
+                    <div>
                       <div class="menus__desc">
                         <h3>Tartare de thon</h3>
                         <p>Assaisonné au yuzu</p>
@@ -79,11 +77,11 @@
                       <div class="menus__checked">
                         <i class="fas fa-check-circle"></i>
                       </div>
-                    </label>
+                    </div>
                   </li>
                   <li class="menus__card">
                     <input type="checkbox" id="bouch" name="e2" value="1" />
-                    <label for="bouch">
+                    <div>
                       <div class="menus__desc">
                         <h3>Bouchée de homard croustillant</h3>
                         <p>Et sa farandolle de petits légumes</p>
@@ -94,11 +92,11 @@
                       <div class="menus__checked">
                         <i class="fas fa-check-circle"></i>
                       </div>
-                    </label>
+                    </div>
                   </li>
                   <li class="menus__card">
                     <input type="checkbox" id="velou" name="e3" value="1" />
-                    <label for="velou">
+                    <div>
                       <div class="menus__desc">
                         <h3>Velouté de cèpes</h3>
                         <p>Aux truffes</p>
@@ -109,7 +107,7 @@
                       <div class="menus__checked">
                         <i class="fas fa-check-circle"></i>
                       </div>
-                    </label>
+                    </div>
                   </li>
                 </ul>
               </article>
@@ -121,7 +119,7 @@
                   <li><h2>Plats</h2></li>
                   <li class="menus__card">
                     <input type="checkbox" id="poul" name="p1" value="1" />
-                    <label for="poul">
+                    <div>
                       <div class="menus__desc">
                         <h3>Poulet rôti aux herbes de provence</h3>
                         <p>Et sa crème de truffe</p>
@@ -132,11 +130,11 @@
                       <div class="menus__checked">
                         <i class="fas fa-check-circle"></i>
                       </div>
-                    </label>
+                    </div>
                   </li>
                   <li class="menus__card">
                     <input type="checkbox" id="lang" name="p2" value="1" />
-                    <label for="lang">
+                    <div>
                       <div class="menus__desc">
                         <h3>Langouste rôtie</h3>
                         <p>Et ses légumes de saisons</p>
@@ -147,11 +145,11 @@
                       <div class="menus__checked">
                         <i class="fas fa-check-circle"></i>
                       </div>
-                    </label>
+                    </div>
                   </li>
                   <li class="menus__card">
                     <input type="checkbox" id="beef" name="p3" value="1" />
-                    <label for="beef">
+                    <div>
                       <div class="menus__desc">
                         <h3>Côte de boeuf angus</h3>
                         <p>Et sa purée de panais</p>
@@ -162,7 +160,7 @@
                       <div class="menus__checked">
                         <i class="fas fa-check-circle"></i>
                       </div>
-                    </label>
+                    </div>
                   </li>
                 </ul>
               </article>
@@ -174,7 +172,7 @@
                   <li><h2>Desserts</h2></li>
                   <li class="menus__card">
                     <input type="checkbox" id="faran" name="d1" value="1" />
-                    <label for="faran">
+                    <div>
                       <div class="menus__desc">
                         <h3>Farandole de desserts</h3>
                         <p>Du chef</p>
@@ -185,11 +183,11 @@
                       <div class="menus__checked">
                         <i class="fas fa-check-circle"></i>
                       </div>
-                    </label>
+                    </div>
                   </li>
                   <li class="menus__card">
                     <input type="checkbox" id="crem" name="d2" value="1" />
-                    <label for="crem">
+                    <div>
                       <div class="menus__desc">
                         <h3>Crème brulée</h3>
                         <p>Revisitée</p>
@@ -200,11 +198,11 @@
                       <div class="menus__checked">
                         <i class="fas fa-check-circle"></i>
                       </div>
-                    </label>
+                    </div>
                   </li>
                   <li class="menus__card">
                     <input type="checkbox" id="tira" name="d3" value="1" />
-                    <label for="tira">
+                    <div>
                       <div class="menus__desc">
                         <h3>Tiramisu</h3>
                         <p>À la noisette</p>
@@ -215,7 +213,7 @@
                       <div class="menus__checked">
                         <i class="fas fa-check-circle"></i>
                       </div>
-                    </label>
+                    </div>
                   </li>
                 </ul>
               </article>
@@ -230,19 +228,23 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <ul class="footer__list">
-        <li><h3>ohmyfood</h3></li>
-        <li>
-          <a href="#" class="footer__link"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
+      <ul class="footer__container">
+        <li><h3 class="footer__title">ohmyfood</h3></li>
+        <li class="footer__list">
+          <a href="#" class="footer__link"
+            ><i class="fas fa-utensils"></i>Proposer un restaurant</a
+          >
         </li>
-        <li>
+        <li class="footer__list">
           <a href="#" class="footer__link"
             ><i class="fas fa-hands-helping"></i>Devenir un partenaire</a
           >
         </li>
-        <li><a href="#" class="footer__link">Mentions légales</a></li>
-        <li>
-          <a href="mailto:webmaster@ohmyfood.com" class="footer__link">Contact</a>
+        <li class="footer__list"><a href="#" class="footer__link">Mentions légales</a></li>
+        <li class="footer__list">
+          <a href="mailto:webmaster@ohmyfood.com" class="footer__link"
+            >Contact</a
+          >
         </li>
       </ul>
     </footer>
