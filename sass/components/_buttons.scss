@@ -8,8 +8,9 @@
     font-size: 0.9em;
     font-weight: 700;
     @include header_box-shadow;
-
-    // &:hover {
-
-    // }
+    &:hover {
+        transition: box-shadow 300ms;
+        background: linear-gradient(350deg, lighten($color-primary, 5%) 0%, lighten($color-secondary, 5%) 100%);
+        box-shadow: 10px 10px 15px gray;
+    }
 }

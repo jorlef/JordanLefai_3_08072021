@@ -16,5 +16,8 @@
         & i {
             width: 1.7em;
         }
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
