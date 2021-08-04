@@ -5,9 +5,6 @@
   }
   &__caption {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 20px;
     padding: 2rem 1rem;
     bottom: 0;
@@ -19,19 +16,29 @@
     }
   }
   &__title {
+    display: inline-block;
     text-align: center;
     font-family: "Shrikhand", cursive;
     font-size: 1.8rem;
     font-weight: 300;
+    max-width: 80%;
   }
   &__like {
+    display: inline-block;
+    position: absolute;
+    bottom: 66px;
+    right: 50px;
     & i.fas {
       display: none;
+      position: absolute;
+    }
+    & i.far {
+      position: absolute;
     }
   }
   &__like:hover {
     & i.far {
-      display: none;
+      animation: fade-out 0.5s ease-out forwards;
     }
     & i.fas {
       display: inline;
@@ -41,8 +48,10 @@
         $color-secondary
       );
       background-clip: text;
+      color: transparent;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      animation: fade-in 0.5s ease-out;
     }
   }
 }
@@ -51,8 +60,14 @@
   background-color: $background-color_primary;
   padding: 0 1rem 2rem 1rem;
   &__list {
-    & > li {
-      margin-bottom: 2rem;
+    $k: 0;
+    @for $i from 1 through 3 {
+      @for $j from 1 through 5 {
+        $k: $k + 0.2;
+        > li:nth-child(#{$i}) .menus__card:nth-child(#{$j}) {
+          animation: translate_menu 1s ease-in-out ($k+s) forwards;
+        }
+      }
     }
   }
   &__type {
@@ -80,10 +95,13 @@
     height: 4.5rem;
     overflow: hidden;
     @include header_box-shadow;
+    opacity: 0;
+    // animation: translate 1s ease-out;
     & > div {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      align-items: stretch;
     }
     & h3 {
       font-size: 1.1em;
@@ -97,6 +115,33 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+    // &:hover .menus__checked {
+    //   animation: checked_translate 0.8s ease-in-out forwards;
+    // }
+    // & .menus__checked {
+    //   animation: checked_translate-reverse 0.6s ease-in-out forwards;
+    // }
+    // &:hover .menus__checked i.fas {
+    //   animation: checked_rotate 0.8s 0.2s ease-in-out forwards;
+    // }
+    // & .menus__checked i.fas {
+    //   animation: checked_rotate-reverse 0.5s ease-out forwards;
+    //   transition: transform 2s flex-basis ;
+    // }
+    & .menus__checked {
+      transition: transform 1s ease-out, flex-basis 1s ease-out;
+      transform: translateX(50px);
+      flex-basis: 1%;
+    }
+    &:hover .menus__checked {
+      transition: transform 1s ease-out, flex-basis 1s ease-out;
+      transform: translateX(0);
+      flex-basis: 100px;
+    }
+    &:hover .menus__checked i.fas {
+      transition: transform 0.5s 0.3s ease-out;
+      transform: rotate(360deg);
+    }
   }
   &__desc {
     padding: 1rem 0.5rem;
@@ -104,12 +149,24 @@
     flex-basis: 80%;
   }
   &__price {
-    padding-right: 2rem;
+    padding-right: 1rem;
+    padding-top: 1.6rem;
     text-align: right;
     flex-basis: 20%;
   }
   &__checked {
-    display: none;
+    display: block;
+    width: 8%;
+    text-align: center;
+    flex-basis: 1%;
+    transform: translateX(50px);
+    background-color: $color-tertiary;
+    min-height: 100%;
+    & i {
+      margin-top: 1.2rem;
+      color: white;
+      font-size: 2rem;
+    }
   }
   &__button {
     text-align: center;

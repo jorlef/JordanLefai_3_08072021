@@ -51,6 +51,56 @@ h1 {
   color: #353535;
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bodyOpacity {
+  0% {
+    background-color: rgba(255, 255, 255, 0.8);
+    visibility: visible;
+  }
+  80% {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    visibility: hidden;
+  }
+}
+@keyframes loadingSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loadingSpinnerHide {
+  0% {
+    visibility: visible;
+    opacity: initial;
+  }
+  80% {
+    opacity: initial;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
 .header {
   height: 4rem;
   text-align: center;
@@ -128,6 +178,39 @@ h1 {
 }
 .footer__link:hover {
   text-decoration: underline;
+}
+
+.loading {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  animation: bodyOpacity 2s ease-out forwards;
+}
+.loading__spinner {
+  display: flex;
+  width: 120px;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 10;
+  animation: loadingSpinnerHide 2s forwards;
+}
+.loading__spinner:after {
+  content: "";
+  border: 16px solid #99E2D0;
+  border-bottom: 16px solid #9356DC;
+  /* Blue */
+  border-top: 16px solid #FF79DA;
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: loadingSpinner 1s ease-in-out infinite;
 }
 
 .functioning {
@@ -218,25 +301,46 @@ h1 {
   box-shadow: 0 2px 5px gray;
 }
 .restaurants__caption {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
   padding: 0.6em 1em;
 }
 .restaurants__caption i {
   font-size: 2em;
 }
+.restaurants__desc {
+  display: inline-block;
+  max-width: 70%;
+}
+.restaurants__desc > * {
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.restaurants__like {
+  display: inline-block;
+  position: absolute;
+  right: 50px;
+  top: 15px;
+}
+.restaurants__like > i.far {
+  position: absolute;
+}
 .restaurants__like > i.fas {
   display: none;
+  position: absolute;
 }
 .restaurants__like:hover > i.fas {
   display: inline;
   background: -webkit-linear-gradient(300deg, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: fade-in 0.5s ease-out;
 }
 .restaurants__like:hover > i.far {
-  display: none;
+  animation: fade-out 0.5s ease-out forwards;
 }
 
 /*# sourceMappingURL=style.css.map */

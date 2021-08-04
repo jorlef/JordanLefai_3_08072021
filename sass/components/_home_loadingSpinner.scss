@@ -1,0 +1,39 @@
+@keyframes bodyOpacity  {
+    0% {
+        background-color: rgba($color: white, $alpha: 0.8);
+        visibility: visible;
+        // opacity: 0.3;
+    }
+    80% {
+        background-color: rgba($color: white, $alpha: 0.8);
+        // opacity: 0.3;
+    }
+    100% {
+        background-color: rgba($color: white, $alpha: 0);
+        visibility: hidden;
+        // opacity: 1; 
+    }
+}
+
+@keyframes loadingSpinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loadingSpinnerHide {
+    0% {
+        visibility: visible;
+        opacity: initial;
+    }
+    80% {
+        opacity: initial;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
