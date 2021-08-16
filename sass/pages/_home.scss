@@ -73,6 +73,25 @@
   }
 }
 
+@media screen and (min-width: 992px) {
+  .functioning {
+    &__list{
+      flex-direction: row;
+      flex-wrap: wrap;
+      & li:first-child {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      & li:nth-child(1n+2) {
+        flex-basis: 29%;
+        flex-grow: 1;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
 .restaurants {
   background-color: $background-color_primary;
   padding: 3em 1.1em;
@@ -161,6 +180,28 @@
     }
     & > i.far {
       animation: fade-out 0.5s ease-out forwards;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .restaurants {
+    &__container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    &__card {
+      flex-grow: 1;
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .restaurants {
+    &__card {
+      flex-grow: 1;
+      width: 20%;
     }
   }
 }

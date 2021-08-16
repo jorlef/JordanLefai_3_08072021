@@ -1,7 +1,9 @@
-.section {
+.article {
   position: relative;
   &__img {
     width: 100%;
+    object-fit: cover;
+    object-position: 0 -60px;
   }
   &__caption {
     position: absolute;
@@ -37,6 +39,7 @@
     }
   }
   &__like:hover {
+    cursor: pointer;
     & i.far {
       animation: fade-out 0.5s ease-out forwards;
     }
@@ -47,11 +50,26 @@
         $color-primary,
         $color-secondary
       );
-      background-clip: text;
-      color: transparent;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: fade-in 0.5s ease-out;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .article {
+    &__img {
+      max-height: 500px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .article {
+    &__img {
+      max-height: 600px;
+      object-position: 0 65%;
     }
   }
 }
@@ -96,7 +114,9 @@
     overflow: hidden;
     @include header_box-shadow;
     opacity: 0;
-    // animation: translate 1s ease-out;
+    &:hover {
+      cursor: pointer;
+    }
     & > div {
       display: flex;
       justify-content: space-between;
@@ -115,31 +135,18 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    // &:hover .menus__checked {
-    //   animation: checked_translate 0.8s ease-in-out forwards;
-    // }
-    // & .menus__checked {
-    //   animation: checked_translate-reverse 0.6s ease-in-out forwards;
-    // }
-    // &:hover .menus__checked i.fas {
-    //   animation: checked_rotate 0.8s 0.2s ease-in-out forwards;
-    // }
-    // & .menus__checked i.fas {
-    //   animation: checked_rotate-reverse 0.5s ease-out forwards;
-    //   transition: transform 2s flex-basis ;
-    // }
     & .menus__checked {
-      transition: transform 1s ease-out, flex-basis 1s ease-out;
+      transition: transform 500ms ease-out, flex-basis 500ms ease-out;
       transform: translateX(50px);
       flex-basis: 1%;
     }
     &:hover .menus__checked {
-      transition: transform 1s ease-out, flex-basis 1s ease-out;
+      transition: transform 500ms ease-out, flex-basis 500ms ease-out;
       transform: translateX(0);
-      flex-basis: 100px;
+      flex-basis: 80px;
     }
     &:hover .menus__checked i.fas {
-      transition: transform 0.5s 0.3s ease-out;
+      transition: transform 0.3s 0.2s ease-out;
       transform: rotate(360deg);
     }
   }
@@ -171,5 +178,37 @@
   &__button {
     text-align: center;
     padding-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 1252px) {
+  .menus {
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 40px;
+      & li:nth-child(1n+1) {
+        flex-basis: 25%;
+        flex-grow: 1;
+      }
+      & li:last-child {
+        flex-basis: 100%;
+      }
+    }
+    &__type {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex-wrap: wrap;
+      & li:first-child {
+        flex-basis: 100%;
+      }
+    }
+    &__card {
+      flex-basis: 30%;
+      flex-grow: 1;
+      margin: 0;
+    }
   }
 }

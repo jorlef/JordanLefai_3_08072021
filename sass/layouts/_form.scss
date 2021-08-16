@@ -7,6 +7,11 @@
   }
   &__input {
     padding-left: 0.8em;
+    height: 1.5rem;
+    &:focus {
+      transition: outline 100ms;
+      outline: 2px solid $color-primary;
+    }
   }
   &__book {
     background-color: $background-color_primary;
