@@ -2,16 +2,13 @@
     0% {
         background-color: rgba($color: white, $alpha: 0.8);
         visibility: visible;
-        // opacity: 0.3;
     }
     80% {
         background-color: rgba($color: white, $alpha: 0.8);
-        // opacity: 0.3;
     }
     100% {
         background-color: rgba($color: white, $alpha: 0);
         visibility: hidden;
-        // opacity: 1; 
     }
 }
 

@@ -17,10 +17,6 @@ li {
   list-style: none;
 }
 
-[type=checkbox] {
-  display: none;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -30,10 +26,25 @@ h1 {
   font-size: 1.5em;
 }
 
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
 .btn {
+  display: block;
   height: 3rem;
   width: 13rem;
   border: none;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 25px;
   background: linear-gradient(350deg, #9356DC 0%, #FF79DA 100%);
   color: #fff;
@@ -41,18 +52,18 @@ h1 {
   font-weight: 700;
   box-shadow: 0 2px 5px gray;
 }
-.btn:hover {
+.btn--hover:hover {
   transition: all 300ms;
   background: linear-gradient(350deg, #a16be0 0%, #ff93e1 100%);
   box-shadow: 10px 10px 15px gray;
 }
 
 .input {
-  background-color: transparent;
   border: none;
-  font-size: 1em;
-  font-weight: bold;
+  background-color: transparent;
   color: #353535;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 @keyframes fade-in {
@@ -106,60 +117,89 @@ h1 {
   }
 }
 .header {
+  position: relative;
   height: 4rem;
   text-align: center;
   z-index: 1;
-  position: relative;
+  background-color: #fff;
   box-shadow: 0 2px 5px gray;
 }
 .header__nav {
-  margin-top: auto;
-  margin-bottom: auto;
-  transform: translateY(30%);
-}
-.header__link {
-  font-family: "Shrikhand", cursive;
-  font-size: 2em;
+  padding-top: 1rem;
 }
 .header__list {
   display: flex;
   align-items: center;
 }
-.header__arrow {
-  flex-basis: 10%;
-  font-size: 0.7em;
-  text-align: left;
-}
-.header__arrow a {
-  padding-left: 20px;
+.header__link {
+  font-family: "Shrikhand", cursive;
+  font-size: 2em;
 }
 .header__logo {
-  flex-basis: 80%;
+  width: 150px;
+  height: 2rem;
+  margin: 0 auto;
+}
+.header__arrow {
+  position: absolute;
+  flex-basis: 10%;
+  font-size: 0.7rem;
+  text-align: left;
+}
+.header__arrow > a {
+  padding-left: 20px;
 }
 
 .search__bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 2.5rem 0.6rem 4rem;
   background-color: #eaeaea;
-  padding: 1em 0 1em 3em;
   color: #353535;
-  text-align: center;
+}
+.search__icon {
+  order: -1;
+  height: 2rem;
+  width: 1.5rem;
+  border: 3px solid transparent;
+  border-right: none;
+}
+.search__icon::before {
+  display: inline-block;
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+  font-size: 1.2rem;
 }
 .search__input {
-  padding-left: 0.8em;
-  height: 1.5rem;
+  width: 20ch;
+  padding-left: 0.8rem;
+  height: 2rem;
+  border: 3px solid transparent;
+  border-left: none;
 }
 .search__input:focus {
-  transition: outline 100ms;
-  outline: 2px solid #9356DC;
+  transition: border 300ms;
+  border: 3px solid #9356DC;
+  border-left: none;
+  border-radius: 0 25px 25px 0;
+  outline: none;
 }
-.search__book {
+.search__input:focus + .search__icon {
+  transition: border 300ms;
+  border: 3px solid #9356DC;
+  border-radius: 25px 0 0 25px;
+  border-right: none;
+}
+.search__desc {
   background-color: #f6f6f6;
   padding: 3em 2em;
   text-align: center;
 }
-.search__book h1 {
+.search__title {
   padding: 0 1em;
 }
-.search__book p {
+.search__subtitle {
   padding: 1em 0 1.5em 0;
   font-size: 1em;
   font-weight: 300;
@@ -173,20 +213,20 @@ h1 {
 .footer__title {
   font-family: "Shrikhand", cursive;
   font-weight: 300;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 .footer__list {
-  margin: 0.5em 0;
+  margin: 0.5rem 0;
 }
 .footer__link {
   color: #fff;
   font-weight: 300;
 }
-.footer__link i {
-  width: 1.7em;
-}
 .footer__link:hover {
   text-decoration: underline;
+}
+.footer__icon {
+  width: 1.7rem;
 }
 
 .loading {
@@ -198,34 +238,36 @@ h1 {
   animation: bodyOpacity 2s ease-out forwards;
 }
 .loading__spinner {
-  display: flex;
-  width: 120px;
   position: fixed;
+  width: 120px;
+  height: 120px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 45vh;
   z-index: 10;
   animation: loadingSpinnerHide 2s forwards;
 }
 .loading__spinner:after {
   content: "";
-  border: 16px solid #99E2D0;
-  border-bottom: 16px solid #9356DC;
-  /* Blue */
-  border-top: 16px solid #FF79DA;
-  /* Blue */
-  border-radius: 50%;
+  display: block;
   width: 120px;
   height: 120px;
+  border: 16px solid #99E2D0;
+  border-bottom: 16px solid #9356DC;
+  border-top: 16px solid #FF79DA;
+  border-radius: 50%;
   animation: loadingSpinner 1s ease-in-out infinite;
 }
 
 .functioning {
   margin: 3em 1em 3em 2em;
 }
-.functioning__list {
+.functioning__title {
+  margin-bottom: 1rem;
+}
+.functioning__container {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -234,9 +276,18 @@ h1 {
   background-color: #f6f6f6;
   padding: 1em 0;
   border-radius: 15px;
+  cursor: pointer;
   box-shadow: 0 2px 5px gray;
 }
-.functioning__step > span:first-child {
+.functioning__step--hover:hover {
+  transition: background-color 400ms;
+  background-color: #e4d5f6;
+}
+.functioning__step--hover:hover > .functioning__icon {
+  transition: background-color 400ms;
+  color: #9356DC;
+}
+.functioning__stepNumber {
   display: inline-flex;
   height: 25px;
   width: 25px;
@@ -247,39 +298,26 @@ h1 {
   color: #fff;
   transform: translateX(-10px);
 }
-.functioning__step i {
+.functioning__stepDesc {
+  display: inline-block;
+  font-weight: 700;
+}
+.functioning__icon {
   color: gray;
   width: 2.5em;
   text-align: center;
   font-size: 1.2em;
 }
-.functioning__step span:nth-child(3) {
-  display: inline-block;
-  font-weight: 700;
-}
-.functioning__step--hover:hover {
-  transition: background-color 400ms;
-  background-color: #e4d5f6;
-}
-.functioning__step--hover:hover > i {
-  transition: background-color 400ms;
-  color: #9356DC;
-}
 
 @media screen and (min-width: 992px) {
-  .functioning__list {
+  .functioning__container {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 30px;
   }
-  .functioning__list li:first-child {
-    flex-basis: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .functioning__list li:nth-child(1n+2) {
-    flex-basis: 29%;
+  .functioning__step {
+    flex-basis: 30%;
     flex-grow: 1;
-    margin: 0 10px;
   }
 }
 .restaurants {
@@ -301,14 +339,14 @@ h1 {
   overflow: hidden;
   box-shadow: 0 2px 5px gray;
 }
-.restaurants__card img {
+.restaurants__image {
+  position: relative;
+}
+.restaurants__image img {
   object-fit: cover;
   object-position: 0 60%;
   width: 100%;
   height: 180px;
-}
-.restaurants__image {
-  position: relative;
 }
 .restaurants__image span {
   position: absolute;
@@ -358,8 +396,6 @@ h1 {
 .restaurants__like:hover > i.fas {
   display: inline;
   background: -webkit-linear-gradient(300deg, #9356DC 0%, #FF79DA 100%);
-  background-clip: text;
-  color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: fade-in 0.5s ease-out;

@@ -1,3 +1,15 @@
 @mixin header_box-shadow {
-    box-shadow: 0 2px 5px gray;
+  box-shadow: 0 2px 5px gray;
+}
+
+@mixin menus_appear {
+  $k: 0;
+  @for $i from 1 through 3 {
+    @for $j from 1 through 5 {
+      $k: $k + 0.2;
+      > article:nth-child(#{$i}) .menus__card:nth-child(#{$j}) {
+        animation: translate_menu 1s ease-in-out ($k + s) forwards;
+      }
+    }
+  }
 }

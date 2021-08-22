@@ -1,29 +1,56 @@
 .search {
   &__bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 2.5rem 0.6rem 4rem;
     background-color: $background-color_input;
-    padding: 1em 0 1em 3em;
     color: $color-input;
-    text-align: center;
   }
-  &__input {
-    padding-left: 0.8em;
-    height: 1.5rem;
-    &:focus {
-      transition: outline 100ms;
-      outline: 2px solid $color-primary;
+  &__icon {
+    order: -1;
+    height: 2rem;
+    width: 1.5rem;
+    border: 3px solid transparent;
+    border-right: none;
+    &::before {
+      display: inline-block;
+      padding-top: 0.3rem;
+      padding-left: 0.5rem;
+      font-size: 1.2rem;
     }
   }
-  &__book {
+  &__input {
+    width: 20ch;
+    padding-left: 0.8rem;
+    height: 2rem;
+    border: 3px solid transparent;
+    border-left: none;
+    &:focus {
+      transition: border 300ms;
+      border: 3px solid $color-primary;
+      border-left: none;
+      border-radius: 0 25px 25px 0;
+      outline: none;
+      & + .search__icon {
+        transition: border 300ms;
+        border: 3px solid $color-primary;
+        border-radius: 25px 0 0 25px;
+        border-right: none;
+      }
+    }
+  }
+  &__desc {
     background-color: $background-color_primary;
     padding: 3em 2em;
     text-align: center;
-    & h1 {
-        padding: 0 1em;
-    }
-    & p {
-        padding: 1em 0 1.5em 0;
-        font-size: 1em;
-        font-weight: 300;
-    }
+  }
+  &__title {
+    padding: 0 1em;
+  }
+  &__subtitle {
+    padding: 1em 0 1.5em 0;
+    font-size: 1em;
+    font-weight: 300;
   }
 }

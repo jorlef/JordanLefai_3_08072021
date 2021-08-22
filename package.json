@@ -1,10 +1,12 @@
 {
-  "name": "website",
+  "name": "website_final",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css ./sass/restaurants-menu.scss:./css/style_restaurants-menu.css"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css ./sass/restaurants_menu.scss:./css/style-restaurants_menu.css",
+    "mkdir": "mkdir sass\\base sass\\utils sass\\layouts sass\\components sass\\pages sass\\themes sass\\vendors"
+
   },
   "author": "",
   "license": "ISC"

@@ -1,22 +1,59 @@
-.article {
-  position: relative;
+.illustration {
+  width: 100%;
+  margin: -10% 0;
+  z-index: -1;
+  max-height: 400px;
   &__img {
     width: 100%;
+    max-height: 400px;
     object-fit: cover;
-    object-position: 0 -60px;
+    position: relative;
+    z-index: -1;
   }
-  &__caption {
-    position: absolute;
-    gap: 20px;
-    padding: 2rem 1rem;
-    bottom: 0;
-    width: 100%;
-    border-radius: 25px 25px 0 0;
-    background-color: $background-color_primary;
-    & .fa-heart {
-      font-size: 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .illustration {
+    max-height: 500px;
+    &__img {
+      max-height: 500px;
     }
   }
+}
+
+@media screen and (min-width: 992px) {
+  .illustration {
+    max-height: 600px;
+    &__img {
+      max-height: 600px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .illustration {
+    max-height: 700px;
+    &__img {
+      max-height: 700px;
+    }
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .illustration {
+    max-height: 800px;
+    &__img {
+      max-height: 800px;
+      object-position: 0 65%;
+    }
+  }
+}
+
+.menus {
+  background-color: $background-color_primary;
+  padding: 0 1rem 2rem 1rem;
+  border-radius: 25px 25px 0 0;
+  position: relative;
   &__title {
     display: inline-block;
     text-align: center;
@@ -24,18 +61,21 @@
     font-size: 1.8rem;
     font-weight: 300;
     max-width: 80%;
+    margin: 1rem 0;
   }
   &__like {
     display: inline-block;
     position: absolute;
-    bottom: 66px;
+    top: 1.5rem;
     right: 50px;
     & i.fas {
       display: none;
       position: absolute;
+      font-size: 1.5rem;
     }
     & i.far {
       position: absolute;
+      font-size: 1.5rem;
     }
   }
   &__like:hover {
@@ -55,47 +95,15 @@
       animation: fade-in 0.5s ease-out;
     }
   }
-}
-
-@media screen and (min-width: 768px) {
-  .article {
-    &__img {
-      max-height: 500px;
-    }
+  &__container {
+    @include menus_appear;
   }
-}
-
-@media screen and (min-width: 992px) {
-  .article {
-    &__img {
-      max-height: 600px;
-      object-position: 0 65%;
-    }
-  }
-}
-
-.menus {
-  background-color: $background-color_primary;
-  padding: 0 1rem 2rem 1rem;
-  &__list {
-    $k: 0;
-    @for $i from 1 through 3 {
-      @for $j from 1 through 5 {
-        $k: $k + 0.2;
-        > li:nth-child(#{$i}) .menus__card:nth-child(#{$j}) {
-          animation: translate_menu 1s ease-in-out ($k+s) forwards;
-        }
-      }
-    }
-  }
-  &__type {
-    & li:first-child {
-      position: relative;
-    }
+  &__article {
     & h2 {
       padding: 5px 0;
       text-transform: uppercase;
       font-weight: 300;
+      position: relative;
     }
     & h2::before {
       content: "";
@@ -107,6 +115,8 @@
     }
   }
   &__card {
+    display: flex;
+    align-items: stretch;
     background-color: $color-white;
     border-radius: 15px;
     margin: 1rem 0;
@@ -117,12 +127,6 @@
     &:hover {
       cursor: pointer;
     }
-    & > div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      align-items: stretch;
-    }
     & h3 {
       font-size: 1.1em;
       font-weight: 600;
@@ -131,19 +135,23 @@
       text-overflow: ellipsis;
     }
     & p {
+      font-size: 1rem;
+      font-weight: 300;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
     & .menus__checked {
-      transition: transform 500ms ease-out, flex-basis 500ms ease-out;
+      transition: transform 500ms ease-out, flex-basis 500ms ease-out, margin 500ms;
       transform: translateX(50px);
-      flex-basis: 1%;
+      flex-basis: 1px;
+      margin-left: 0;
     }
     &:hover .menus__checked {
-      transition: transform 500ms ease-out, flex-basis 500ms ease-out;
+      transition: transform 500ms ease-out, flex-basis 500ms ease-out, margin 500ms;
       transform: translateX(0);
       flex-basis: 80px;
+      margin-left: 20px;
     }
     &:hover .menus__checked i.fas {
       transition: transform 0.3s 0.2s ease-out;
@@ -151,64 +159,49 @@
     }
   }
   &__desc {
-    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0.5rem;
+    gap: 10px;
     min-width: 0;
-    flex-basis: 80%;
+    flex-basis: 95%;
   }
   &__price {
-    padding-right: 1rem;
     padding-top: 1.6rem;
+    padding-left: 0.5rem;
     text-align: right;
-    flex-basis: 20%;
+    flex-basis: 10%;
   }
   &__checked {
     display: block;
-    width: 8%;
     text-align: center;
-    flex-basis: 1%;
+    flex-basis: 1px;
     transform: translateX(50px);
     background-color: $color-tertiary;
     min-height: 100%;
     & i {
-      margin-top: 1.2rem;
+      margin-top: 1.5rem;
       color: white;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
   &__button {
-    text-align: center;
-    padding-top: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
   }
 }
 
 @media screen and (min-width: 1252px) {
   .menus {
-    &__list {
+    &__container {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
-      gap: 40px;
-      & li:nth-child(1n+1) {
-        flex-basis: 25%;
-        flex-grow: 1;
-      }
-      & li:last-child {
-        flex-basis: 100%;
-      }
+      gap: 30px;
     }
-    &__type {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      flex-wrap: wrap;
-      & li:first-child {
-        flex-basis: 100%;
-      }
-    }
-    &__card {
+    &__article {
       flex-basis: 30%;
       flex-grow: 1;
-      margin: 0;
     }
   }
 }

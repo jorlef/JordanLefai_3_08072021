@@ -1,32 +1,34 @@
 .header {
+  position: relative;
   height: $header-height;
   text-align: center;
   z-index: 1;
-  position: relative;
+  background-color: $color-white;
   @include header_box-shadow;
   &__nav {
-    margin-top: auto;
-    margin-bottom: auto;
-    transform: translateY(30%);
-  }
-  &__link {
-      font-family: "Shrikhand", cursive;
-      font-size: 2em;
+    padding-top: 1rem;
   }
   &__list {
     display: flex;
     align-items: center;
   }
+  &__link {
+    font-family: "Shrikhand", cursive;
+    font-size: 2em;
+  }
+  &__logo {
+    width: 150px;
+    height: 2rem;
+    margin: 0 auto;
+  }
+
   &__arrow {
+    position: absolute;
     flex-basis: 10%;
-    font-size: 0.7em;
+    font-size: 0.7rem;
     text-align: left;
-    & a {
+    & > a {
       padding-left: 20px;
     }
   }
-  &__logo {
-    flex-basis: 80%;
-  }
-
 }
