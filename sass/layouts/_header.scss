@@ -16,19 +16,20 @@
   }
 
   &__link {
-    font-family: "Shrikhand", cursive;
     font-size: 2em;
   }
 
   &__logo {
+    margin: 0 auto;
+  }
+
+  &__svg {
     width: 150px;
     height: 2rem;
-    margin: 0 auto;
   }
 
   &__arrow {
     position: absolute;
-    flex-basis: 10%;
     font-size: 0.7rem;
     text-align: left;
     
