@@ -5,6 +5,7 @@
   top: 0;
   bottom: 0;
   animation: bodyOpacity 2s ease-out forwards;
+
   &__spinner {
     position: fixed;
     width: 120px;
@@ -16,6 +17,7 @@
     top: 45vh;
     z-index: 10;
     animation: loadingSpinnerHide 2s forwards;
+
     &:after {
       content: "";
       display: block;
@@ -32,29 +34,35 @@
 
 .functioning {
   margin: 3em 1em 3em 2em;
+
   &__title {
     margin-bottom: 1rem;
   }
+
   &__container {
     display: flex;
     flex-direction: column;
     gap: 1em;
   }
+
   &__step {
     background-color: $background-color_primary;
     padding: 1em 0;
     border-radius: 15px;
     cursor: pointer;
     @include header_box-shadow;
+
     &--hover:hover {
       transition: background-color 400ms;
       background-color: lighten($color-primary, 30%);
+
       & > .functioning__icon {
         transition: background-color 400ms;
         color: $color-primary;
       }
     }
   }
+
   &__stepNumber {
     display: inline-flex;
     height: 25px;
@@ -66,10 +74,12 @@
     color: $color-white;
     transform: translateX(-10px);
   }
+
   &__stepDesc {
     display: inline-block;
     font-weight: 700;
   }
+
   &__icon {
     color: gray;
     width: 2.5em;
@@ -80,23 +90,13 @@
 
 @media screen and (min-width: 992px) {
   .functioning {
+
     &__container {
       flex-direction: row;
       flex-wrap: wrap;
       gap: 30px;
-      // & li:first-child {
-      //   flex-basis: 100%;
-      //   text-align: center;
-      //   margin-bottom: 20px;
-      // }
-      // & li:nth-child(1n+2) {
-      //   flex-basis: 29%;
-      //   flex-grow: 1;
-      //   margin: 0 10px;
-      // }
-      // }
-      
     }
+
     &__step {
       flex-basis: 30%;
       flex-grow: 1;
@@ -107,14 +107,17 @@
 .restaurants {
   background-color: $background-color_primary;
   padding: 3em 1.1em;
+
   &__title {
     margin-bottom: 1em;
   }
+
   &__container {
     display: flex;
     flex-direction: column;
     gap: 1.2em;
   }
+
   &__card {
     width: 100%;
     height: 250px;
@@ -122,14 +125,17 @@
     overflow: hidden;
     @include header_box-shadow;
   }
+
   &__image {
     position: relative;
+
     & img {
       object-fit: cover;
       object-position: 0 60%;
       width: 100%;
       height: 180px;
     }
+
     & span {
       position: absolute;
       display: flex;
@@ -146,16 +152,20 @@
       @include header_box-shadow;
     }
   }
+
   &__caption {
     position: relative;
     padding: 0.6em 1em;
+
     & i {
       font-size: 2em;
     }
   }
+
   &__desc {
     display: inline-block;
     max-width: 70%;
+
     & > * {
       min-width: 0;
       white-space: nowrap;
@@ -163,20 +173,25 @@
       overflow: hidden;
     }
   }
+
   &__like {
     display: inline-block;
     position: absolute;
     right: 50px;
     top: 15px;
+
     & > i.far {
       position: absolute;
     }
+
     & > i.fas {
       display: none;
       position: absolute;
     }
   }
+
   &__like:hover {
+
     & > i.fas {
       display: inline;
       background: -webkit-linear-gradient(
@@ -188,6 +203,7 @@
       -webkit-text-fill-color: transparent;
       animation: fade-in 0.5s ease-out;
     }
+
     & > i.far {
       animation: fade-out 0.5s ease-out forwards;
     }
@@ -196,10 +212,12 @@
 
 @media screen and (min-width: 992px) {
   .restaurants {
+
     &__container {
       flex-direction: row;
       flex-wrap: wrap;
     }
+
     &__card {
       flex-grow: 1;
       width: 45%;
@@ -209,6 +227,7 @@
 
 @media screen and (min-width: 1440px) {
   .restaurants {
+
     &__card {
       flex-grow: 1;
       width: 20%;

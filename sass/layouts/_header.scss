@@ -5,17 +5,21 @@
   z-index: 1;
   background-color: $color-white;
   @include header_box-shadow;
+
   &__nav {
     padding-top: 1rem;
   }
+
   &__list {
     display: flex;
     align-items: center;
   }
+
   &__link {
     font-family: "Shrikhand", cursive;
     font-size: 2em;
   }
+
   &__logo {
     width: 150px;
     height: 2rem;
@@ -27,6 +31,7 @@
     flex-basis: 10%;
     font-size: 0.7rem;
     text-align: left;
+    
     & > a {
       padding-left: 20px;
     }
