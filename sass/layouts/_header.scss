@@ -31,7 +31,8 @@
   &__arrow {
     position: absolute;
     font-size: 0.7rem;
-    text-align: left;
+    left: 0;
+    top: 19px;
     
     & > a {
       padding-left: 20px;

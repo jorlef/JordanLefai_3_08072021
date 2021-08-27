@@ -120,7 +120,8 @@ h4 {
 .header__arrow {
   position: absolute;
   font-size: 0.7rem;
-  text-align: left;
+  left: 0;
+  top: 19px;
 }
 .header__arrow > a {
   padding-left: 20px;
@@ -412,6 +413,7 @@ h4 {
   padding-left: 0.5rem;
   text-align: right;
   flex-basis: 10%;
+  transform: translateY(16px);
 }
 .menus__checked {
   display: block;
